@@ -8,6 +8,16 @@ variable "location" {
   description = "Location for the App Service Plan"
 }
 
+variable "os_type" {
+  type        = string
+  description = "os_type for the App Service Plan"
+}
+
+variable "sku_name" {
+  type        = string
+  description = "sku_name for the App Service Plan"
+}
+
 variable "resource_group" {
   type        = string
   description = "Name of the resource group"

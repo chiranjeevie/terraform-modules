@@ -1,16 +1,10 @@
-resource "azurerm_app_service_plan" "example" {
-  name                = var.service_plan_name
+resource "azurerm_service_plan" "example" {
+  name                = "american-airlines-app-serviceplan"
   location            = var.location
   resource_group_name = var.resource_group
 
-  sku {
-    tier = var.sku_tier
-    size = var.sku_size
-  }
-
-  is_xenon          = var.reserved
-
-  tags = var.tags
+  os_type   = var.os_type
+  sku_name  = var.sku_name
 }
 
 output "service_plan_id" {
