@@ -1,5 +1,5 @@
 resource "azurerm_service_plan" "example" {
-  name                = "american-airlines-app-serviceplan"
+  name                = var.service_plan_name
   location            = var.location
   resource_group_name = var.resource_group
 
@@ -7,6 +7,3 @@ resource "azurerm_service_plan" "example" {
   sku_name  = var.sku_name
 }
 
-output "service_plan_id" {
-  value = azurerm_app_service_plan.example.id
-}

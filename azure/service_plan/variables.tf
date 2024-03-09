@@ -34,7 +34,7 @@ variable "sku_size" {
 }
 
 variable "capacity" {
-  type        = int
+  type        = string
   description = "Number of instances to run"
   default     = 1
 }
